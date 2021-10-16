@@ -11,3 +11,19 @@ export function forEachTotal(arry: number[]) {
     console.log(total);
   });
 }
+
+export function images() {
+  let images = [
+    { height: 10, width: 30 },
+    { height: 20, width: 90 },
+    { height: 54, width: 32 },
+  ];
+
+  let areas: number[] = [];
+
+  images.forEach((image) => {
+    let total = image.height * image.width;
+    areas.push(total);
+    console.log(areas);
+  });
+}

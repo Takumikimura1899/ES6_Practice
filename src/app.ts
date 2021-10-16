@@ -1,6 +1,6 @@
 import { Item } from './item';
 import { forLoop } from './for';
-import { forEachLoop, forEachTotal } from './forEach';
+import { forEachLoop, forEachTotal, images } from './forEach';
 
 let elem = document.getElementById('output');
 let aBook = new Item('はじめてのTypeScript', 1980);
@@ -14,3 +14,5 @@ aBook.say(elem);
 forEachLoop(colors);
 
 forEachTotal(numbers);
+
+images();
