@@ -1,7 +1,7 @@
 import { Item } from './item';
 import { forLoop } from './for';
 import { forEachLoop, forEachTotal, images } from './forEach';
-import { doubledNumbersForEach } from './map';
+import { doubledNumbersForEach, doubledNumbersMap } from './map';
 
 let elem = document.getElementById('output');
 let aBook = new Item('はじめてのTypeScript', 1980);
@@ -19,3 +19,5 @@ forEachTotal(numbers);
 images();
 
 doubledNumbersForEach(numbers);
+
+doubledNumbersMap(numbers);

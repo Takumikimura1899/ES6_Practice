@@ -5,3 +5,10 @@ export function doubledNumbersForEach(arry: number[]) {
   });
   console.log(doubledNumbersArry);
 }
+
+export function doubledNumbersMap(arry: number[]) {
+  let doubled = arry.map((elem) => {
+    return elem * 2;
+  });
+  console.log('map', doubled);
+}
