@@ -95,3 +95,37 @@ function unique(array) {
   }, []);
 }
 console.log(unique(numbers2));
+
+const results = [
+  '△',
+  '〇',
+  '〇',
+  '△',
+  '✕',
+  '△',
+  '✕',
+  '〇',
+  '△',
+  '✕',
+  '△',
+  '〇',
+  '✕',
+  '〇',
+  '✕',
+];
+
+function winningScore(array) {
+  return array.reduce((prev, char) => {
+    if (char === '〇') {
+      return prev + 3;
+    } else if (char === '△') {
+      return prev + 1;
+    } else {
+      return prev;
+    }
+  }, 0);
+}
+
+console.log('winningScore', winningScore(results));
+console.log('totalGames', results.length);
+console.log('average', winningScore(results) / results.length);
