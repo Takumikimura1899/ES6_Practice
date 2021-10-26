@@ -58,3 +58,11 @@ const MathLibrary = {
   },
 };
 console.log(MathLibrary.calculateProduct(2, 3), MathLibrary.multiply(2, 3));
+
+function unshift(array: any[], ...rest: any[]) {
+  return [...rest, ...array];
+}
+
+console.log(
+  unshift([1, 2, 3, 4, 'hello', 'こんちゃっす'], 5, 6, 7, 7, 'true', true)
+);

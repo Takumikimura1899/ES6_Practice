@@ -72,3 +72,11 @@ var MathLibrary = {
     }
 };
 console.log(MathLibrary.calculateProduct(2, 3), MathLibrary.multiply(2, 3));
+function unshift(array) {
+    var rest = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        rest[_i - 1] = arguments[_i];
+    }
+    return __spreadArray(__spreadArray([], rest, true), array, true);
+}
+console.log(unshift([1, 2, 3, 4, 'hello', 'こんちゃっす'], 5, 6, 7, 7, 'true', true));
