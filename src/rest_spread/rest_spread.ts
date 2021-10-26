@@ -59,7 +59,10 @@ const MathLibrary = {
 };
 console.log(MathLibrary.calculateProduct(2, 3), MathLibrary.multiply(2, 3));
 
-function unshift(array: any[], ...rest: any[]) {
+function unshift(
+  array: (number | string)[],
+  ...rest: (number | string | boolean)[]
+) {
   return [...rest, ...array];
 }
 
