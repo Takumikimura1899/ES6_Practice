@@ -95,3 +95,25 @@ console.log(
     return { x, y };
   })
 );
+
+const classes = [
+  ['化学', '1時限目', '鈴木先生'],
+  ['物理', '2時限目', '佐藤先生'],
+  ['数学', '3時限目', '木村先生'],
+];
+
+const classesAsObject = classes.map(([subject, time, teacher]) => {
+  return { subject, time, teacher };
+});
+
+const numbers3 = [1, 2, 3];
+
+function doubleA([head, ...rest]: any[]): any {
+  if (!head) {
+    return [];
+  }
+
+  return [2 * head, ...doubleA(rest)];
+}
+
+console.log(doubleA(numbers3));

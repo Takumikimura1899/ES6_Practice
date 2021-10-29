@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var expense = {
     type: '交際費',
     amount: '4500 JPY'
@@ -60,3 +69,21 @@ console.log(points.map(function (_a) {
     var x = _a[0], y = _a[1];
     return { x: x, y: y };
 }));
+var classes = [
+    ['化学', '1時限目', '鈴木先生'],
+    ['物理', '2時限目', '佐藤先生'],
+    ['数学', '3時限目', '木村先生'],
+];
+var classesAsObject = classes.map(function (_a) {
+    var subject = _a[0], time = _a[1], teacher = _a[2];
+    return { subject: subject, time: time, teacher: teacher };
+});
+var numbers3 = [1, 2, 3];
+function doubleA(_a) {
+    var head = _a[0], rest = _a.slice(1);
+    if (!head) {
+        return [];
+    }
+    return __spreadArray([2 * head], doubleA(rest), true);
+}
+console.log(doubleA(numbers3));
